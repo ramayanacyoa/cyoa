@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id = "Question">The Ramayana: Choose Your Adventure</title>
+  <link rel="stylesheet" href="Project.css">
+  <script src="Project.js"></script>
+</head>
+<body>
+
+  <div id="titleContainer">
+    <header>
+      <h1>✨The Ramayana✨</h1>
+      <h3 class="subtitle">An Epic Adventure Awaits</h3>
+      <h4 id = "description">Embark on your own journey through the great Indian Epic of Ramayana. </h4>
+      <p>You will explore your journey through the lands of the Ancient India, making choices and revealing the secrets of what could've truly occurred during the Ramayana.</p>
+      <button onclick = "window.location.href='Backstory.html'">Before the Ramayana</button>
+    </header>
+
+    <div id="beginningContainer">
+      <div class="intro-card">
+        <h2>Welcome, Brave Traveler</h2>
+        <p>Enter your name to begin your legendary journey through the lands of ancient India.</p>
+        <div>
+          <input type="text" id="playerName" placeholder="Rama" />
+        </div>
+            <button onclick="startAdventure()" type="button" id="startBtn">Begin Your Quest</button>
+        </div>
+    </div>
+  </div>
+  <div id = "storyCard">
+    <!-- this is where the story will be displayed -->
+    <div id="choices"></div>
+  </div>

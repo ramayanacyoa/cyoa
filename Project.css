@@ -1,0 +1,131 @@
+/* Ramayana-inspired theme */
+:root {
+  --bg: #1f1b16;                      /* Sundaram night */
+  --surface: #2d2620;                 /* Temple stone */
+  --text: #fdf6e3;                    /* Sita’s glow */
+  --accent: #d89f45;                  /* Golden sari */
+  --accent2: #ec7b2f;                 /* Rama’s bow */
+  --shadow: 0 8px 30px rgba(0,0,0,.45);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--text);
+  font-family: "Merriweather", "Georgia", serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #0c1f4f 0%, #18447f 30%, #0b2a5f 70%, #03122e 100%);
+}
+
+#choices {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: xx-large;
+}
+
+.container {
+  width: min(95%, 900px);
+  margin: 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(8, 27, 75, .7), rgba(14, 29, 53, .9));
+  border: 1px solid rgba(137, 173, 245, .55);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+h1, h2, h3 {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 1.2rem 0 .5rem;
+  color: var(--accent);
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 3.3rem);
+  font-weight: 900;
+  text-shadow: 1px 1px 7px rgba(236,123,47,.65);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 800;
+  color: var(--accent2);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3.4vw, 1.7rem);
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.05rem;
+  margin: .9rem 0;
+  color: rgba(253,246,227,.95);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
+  transition: all .2s ease;
+}
+
+a:hover {
+  color: var(--accent2);
+  border-bottom-color: var(--accent2);
+}
+
+button, .btn {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #1b1210;
+  border: 0;
+  border-radius: 10px;
+  padding: .85rem 1.35rem;
+  font-weight: 800;
+  box-shadow: 0 8px 16px rgba(0,0,0,.4);
+  cursor: pointer;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.45);
+}
+
+.card {
+  background: rgba(38,32,26,.82);
+  border: 1px solid rgba(236,123,47,.45);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin: 1rem 0;
+  box-shadow: var(--shadow);
+}
+
+blockquote {
+  border-left: 4px solid rgba(216,159,69,.9);
+  padding-left: 1rem;
+  margin: 1.2rem 0;
+  font-style: italic;
+  color: #f7efdc;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 1.25rem; margin: 1.25rem; }
+  h1 { font-size: 2.2rem; }
+}
+body::before {
+  content: "";
+  position: fixed; inset: 0;
+  background: radial-gradient(circle at top, rgba(255,200,90,.22), transparent 60%);
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
